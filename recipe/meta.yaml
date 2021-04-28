@@ -1,6 +1,6 @@
 {% set name = "glow" %}
 {% set pypi_name = "glow.py" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: 719dd3b15981eb10ec607fa03ab0c1d5b53744bc0e9a0f899427e80b7e307e4b
+  sha256: ea7907c98e69ec9f9f4f934a35398baaa45d351a7d1e133c1fa0ec7b7f543355
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -40,7 +40,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: 'An open-source toolkit for large-scale genomic analysis'
+  summary: An open-source toolkit for large-scale genomic analysis
   description: |
     Glow is an open-source toolkit for working with genomic data at 
     biobank-scale and beyond. The toolkit is natively built on Apache Spark, 
