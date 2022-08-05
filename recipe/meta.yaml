@@ -1,6 +1,6 @@
 {% set name = "glow" %}
 {% set pypi_name = "glow.py" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ pypi_name[0] }}/{{ pypi_name }}/{{ pypi_name }}-{{ version }}.tar.gz
-  sha256: ecf7c2e5661b68f8118d3ef554c9c6722a555e609245dbc50e4685cc3f6c1dae
+  sha256: fcfd5d6357c2ddb5c6f336a43e0b999c2a3cfe2f7c00f1d1b33be400e9b46f82
 
 build:
   noarch: python
